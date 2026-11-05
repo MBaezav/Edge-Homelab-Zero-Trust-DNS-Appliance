@@ -26,15 +26,15 @@ graph TD
         RemotePC["Workstation Remota"]
     end
 
-    subgraph Red_Local_LAN ["Red Local (192.168.1.0/24)"]
+    subgraph Red_Local_LAN ["Red Local (..IP../24)"]
         SmartTV["Smart TVs / IoT"]
         LocalDevices["Dispositivos Familiares"]
-        ISP_Router["ONT / Router ISP (Gateway: 192.168.1.1)"]
+        ISP_Router["ONT / Router ISP (Gateway: ..IP..)"]
     end
 
     subgraph Edge_Server ["Edge Server (x86_64 Linux + CasaOS)"]
-        ETH["Interfaz Gigabit Ethernet (192.168.1.10)"]
-        TS_IF["Interfaz Tailscale (100.64.0.10)"]
+        ETH["Interfaz Gigabit Ethernet (..IP..)"]
+        TS_IF["Interfaz Tailscale (..IP..)"]
         UFW["Firewall UFW (Puerto 53 TCP/UDP)"]
         
         subgraph Docker_Engine ["Motor de Contenedores Docker"]
